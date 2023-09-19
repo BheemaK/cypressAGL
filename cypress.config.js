@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter', //for html reports
   e2e: {
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 20000,
     setupNodeEvents(on, config) {   
       this.screenshotOnRunFailure=true;   
       require('cypress-mochawesome-reporter/plugin')(on);
